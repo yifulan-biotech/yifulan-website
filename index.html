@@ -130,6 +130,35 @@ header{position:sticky;top:0;z-index:20;background:rgba(15,27,45,.92);
 footer{border-top:1px solid var(--line);padding:40px 0;color:var(--dim);
   font-size:14px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer a:hover{color:var(--gold)}
+
+/* solutions & protocols */
+.sol-tabs{display:flex;gap:12px;flex-wrap:wrap;margin:32px 0 26px}
+.sol-tab-btn{background:transparent;border:1px solid var(--line);color:var(--grey);
+  padding:12px 22px;border-radius:3px;font-size:15px;font-weight:700;cursor:pointer;
+  transition:.2s;display:flex;align-items:center;gap:8px}
+.sol-tab-btn:hover{border-color:var(--gold);color:var(--white)}
+.sol-tab-btn.active{background:var(--gold);color:#14243B;border-color:var(--gold)}
+.sol-pane{display:none;animation:fadeIn .3s ease}
+.sol-pane.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.sol-banner{background:rgba(200,169,106,.07);border:1px solid rgba(200,169,106,.25);
+  border-left:3px solid var(--gold);padding:18px 22px;border-radius:3px;margin-bottom:26px}
+.sol-banner b{color:var(--white)}
+.sol-banner .ev-tag{display:inline-block;background:var(--gold);color:#14243B;
+  font-size:12px;font-weight:700;padding:2px 8px;border-radius:2px;margin-right:8px;letter-spacing:.5px}
+.sol-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:900px){.sol-grid{grid-template-columns:1fr}}
+.sol-box{background:var(--navy-2);border:1px solid var(--line);border-radius:4px;
+  padding:26px 24px;display:flex;flex-direction:column}
+.sol-box h3{color:var(--white);font-size:18px;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between}
+.sol-box .badge{font-size:12px;padding:3px 10px;border-radius:999px;border:1px solid var(--gold);color:var(--gold);font-weight:600}
+.sol-box .sub{color:var(--dim);font-size:14px;margin-bottom:18px}
+.sol-steps{list-style:none;display:flex;flex-direction:column;gap:14px;flex:1}
+.sol-steps li{display:flex;gap:12px;font-size:15px;color:var(--grey);line-height:1.55}
+.sol-step-num{color:var(--gold);font-weight:700;font-size:13px;min-width:24px;padding-top:1px}
+.sol-prods{margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.sol-prods .lbl{font-size:13px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:8px}
+.sol-cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 </style>
 </head>
 <body>
@@ -144,6 +173,7 @@ footer a:hover{color:var(--gold)}
       <li><a href="#what">What we do</a></li>
       <li><a href="what-is-weinengti.html">The technology</a></li>
       <li><a href="#evidence">Evidence</a></li>
+      <li><a href="#solutions">Solutions</a></li>
       <li><a href="articles.html">Science & Insights</a></li>
       <li><a href="#products">Products</a></li>
       <li><a href="#process">How we work</a></li>
@@ -300,6 +330,281 @@ footer a:hover{color:var(--gold)}
       </div>
       <div style="margin-top:30px">
         <a class="btn btn-line" href="what-is-weinengti.html">Read the full explanation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOLUTIONS / TARGETED PROTOCOLS ============ -->
+  <section id="solutions">
+    <div class="wrap">
+      <div class="eyebrow">Targeted Solutions</div>
+      <h2>Treatment protocols by skin concern.</h2>
+      <p class="lead">Moving beyond single-ingredient application. We configure three standardized
+         protocols combining intensive weekly salon infusions with daily homecare maintenance,
+         powered by 50&nbsp;nm biomimetic nanovesicle delivery.</p>
+
+      <!-- Solution Tabs -->
+      <div class="sol-tabs" role="tablist">
+        <button class="sol-tab-btn active" onclick="switchSolTab(0)" role="tab" aria-selected="true">
+          <span>01</span> Melanin &amp; Tone Correction
+        </button>
+        <button class="sol-tab-btn" onclick="switchSolTab(1)" role="tab" aria-selected="false">
+          <span>02</span> Cellular Wrinkle &amp; Firming
+        </button>
+        <button class="sol-tab-btn" onclick="switchSolTab(2)" role="tab" aria-selected="false">
+          <span>03</span> Barrier Recovery &amp; Soothing
+        </button>
+      </div>
+
+      <!-- Tab 1: Melanin & Tone Correction -->
+      <div class="sol-pane active" id="sol-pane-0">
+        <div class="sol-banner">
+          <span class="ev-tag">Target Indication</span>
+          <b>Hyperpigmentation, dull complexion, dark spots, uneven tone and photo-aging.</b>
+          <p style="margin-top:6px;color:var(--grey);font-size:15px">
+            50&nbsp;nm nanovesicle system encapsulates high-potency actives (PDRN / Sodium DNA &amp; targeted brighteners)
+            to block intercellular melanin transfer and revitalize dull epidermal cells at the cellular root.
+          </p>
+        </div>
+
+        <div class="sol-grid">
+          <!-- Salon Column -->
+          <div class="sol-box">
+            <h3>
+              Professional Salon Protocol
+              <span class="badge">7–10 Days / Session</span>
+            </h3>
+            <div class="sub">In-clinic non-invasive device infusion for aesthetic salons &amp; spas</div>
+            <ul class="sol-steps">
+              <li>
+                <span class="sol-step-num">01</span>
+                <div><b>Deep Cleanse &amp; Photo Record:</b> Standardized client intake imaging under clinical lighting.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">02</span>
+                <div><b>Dual Non-Invasive Infusion:</b> Infuse <a href="product-cell-revitalizing-essence.html" style="color:var(--gold)">Revitalizing Essence (微能体肌底焕能液)</a> followed by <a href="product-cleansing-lotion.html" style="color:var(--gold)">Cleansing Lotion (微能体净肤液)</a> across full face for deep cellular tone correction.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">03</span>
+                <div><b>Soothe &amp; Nourish:</b> Apply <a href="product-sheet-mask.html" style="color:var(--gold)">Sheet Mask (微能体焕颜膜)</a> for 15–20 minutes; gently rinse with purified water.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">04</span>
+                <div><b>Barrier Seal:</b> Complete with <a href="product-blue-book-set.html" style="color:var(--gold)">Blue Book 4-Piece Set (微能体蓝皮书套盒)</a> (Spray &#8594; Essence &#8594; Lotion &#8594; Cream).</div>
+              </li>
+            </ul>
+            <div class="sol-prods">
+              <div class="lbl">Key Products in Protocol</div>
+              <span class="pill">Cleansing Lotion (5 ml)</span>
+              <span class="pill">Revitalizing Essence (5 ml)</span>
+              <span class="pill">Sheet Mask</span>
+              <span class="pill">Blue Book 4-Piece Set</span>
+            </div>
+          </div>
+
+          <!-- Homecare Column -->
+          <div class="sol-box">
+            <h3>
+              Homecare Daily Routine
+              <span class="badge">AM &amp; PM Daily</span>
+            </h3>
+            <div class="sub">Daily cellular brightening and tone stabilization at home</div>
+            <ul class="sol-steps">
+              <li>
+                <span class="sol-step-num">01</span>
+                <div><b>Gentle Cleanse:</b> Purify skin with mild lukewarm water.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">02</span>
+                <div><b>4-Step Blue Book Routine:</b> Apply <a href="product-blue-book-set.html" style="color:var(--gold)">Blue Book Set</a> in order: Revitalizing Spray &#8594; Base Revitalizing Fluid &#8594; Revitalizing Lotion &#8594; Revitalizing Cream.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">03</span>
+                <div><b>Intensive Masking:</b> Apply <a href="product-sheet-mask.html" style="color:var(--gold)">Sheet Mask</a> once every 3 days. Do not discard leftover serum in sachet—apply to neck and décolleté.</div>
+              </li>
+            </ul>
+            <div class="sol-prods">
+              <div class="lbl">Key Products in Regimen</div>
+              <span class="pill">Blue Book 4-Piece Set</span>
+              <span class="pill">Sheet Mask (5 Sachets/Box)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sol-cta">
+          <a class="btn btn-gold" href="https://wa.me/8613648303693?text=Hi%20Allan,%20I%20am%20interested%20in%20the%20Melanin%20%26%20Tone%20Correction%20Protocol">Inquire on WhatsApp</a>
+          <a class="btn btn-line" href="products.html">View Product Specs</a>
+        </div>
+      </div>
+
+      <!-- Tab 2: Cellular Wrinkle & Firming -->
+      <div class="sol-pane" id="sol-pane-1">
+        <div class="sol-banner">
+          <span class="ev-tag">28-Day Clinical Evidence</span>
+          <b>JC-02 Third-Party Efficacy Report: Eye wrinkle area ↓32.18% · Skin elasticity R2 ↑19.26%.</b>
+          <p style="margin-top:6px;color:var(--grey);font-size:15px">
+            Engineered for expression lines, loss of dermal firmness and structural collagen breakdown.
+            50&nbsp;nm carrier facilitates deep transdermal delivery of multi-peptides and Sodium DNA directly to fibroblasts.
+          </p>
+        </div>
+
+        <div class="sol-grid">
+          <!-- Salon Column -->
+          <div class="sol-box">
+            <h3>
+              Professional Salon Protocol
+              <span class="badge">7–10 Days / Session</span>
+            </h3>
+            <div class="sub">Intensive anti-wrinkle &amp; lifting treatment for beauty salons</div>
+            <ul class="sol-steps">
+              <li>
+                <span class="sol-step-num">01</span>
+                <div><b>Cleanse &amp; Imaging:</b> Deep cleanse and capture standardized clinical before photos.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">02</span>
+                <div><b>Dual Device Infusion:</b> First infuse <a href="product-cell-revitalizing-essence.html" style="color:var(--gold)">Cell Revitalizing Essence (微能体细胞焕能液)</a> to re-energize dermal baseline, then infuse <a href="product-firming-ampoule-lotion.html" style="color:var(--gold)">Firming Anti-Wrinkle Solution (微能体紧致抗皱液)</a> targeting wrinkles &amp; facial contours.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">03</span>
+                <div><b>Recovery Sheet Mask:</b> Apply <a href="product-sheet-mask.html" style="color:var(--gold)">Sheet Mask</a> for 15–20 minutes to calm and lock active peptides.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">04</span>
+                <div><b>Lifting Finish:</b> Complete with <a href="product-blue-book-set.html" style="color:var(--gold)">Blue Book Set</a> (Spray &#8594; 30 ml Essence &#8594; Lotion &#8594; Cream).</div>
+              </li>
+            </ul>
+            <div class="sol-prods">
+              <div class="lbl">Key Products in Protocol</div>
+              <span class="pill">Cell Revitalizing Essence (5 ml)</span>
+              <span class="pill">Firming Anti-Wrinkle Solution (5 ml)</span>
+              <span class="pill">Sheet Mask</span>
+              <span class="pill">Blue Book Set</span>
+            </div>
+          </div>
+
+          <!-- Homecare Column -->
+          <div class="sol-box">
+            <h3>
+              Homecare Daily Routine
+              <span class="badge">AM &amp; PM Daily</span>
+            </h3>
+            <div class="sub">5-Step targeted wrinkle support and structural firming maintenance</div>
+            <ul class="sol-steps">
+              <li>
+                <span class="sol-step-num">01</span>
+                <div><b>Cleanse &amp; Prime:</b> Cleanse face, followed by Revitalizing Spray and Base Revitalizing Fluid.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">02</span>
+                <div><b>Targeted Wrinkle Support:</b> Apply <a href="product-ampoule-fluid.html" style="color:var(--gold)"><span translate="no">WEINENGTI</span> Wrinkle Support (微能体皱纹支架 5 ml × 6)</a> directly to crow's feet, forehead lines and nasolabial folds.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">03</span>
+                <div><b>Lock &amp; Firm:</b> Smooth on Revitalizing Lotion followed by Revitalizing Cream (Day lightweight / Night intensive).</div>
+              </li>
+              <li>
+                <span class="sol-step-num">04</span>
+                <div><b>Intensive Sheet Mask:</b> Use Sheet Mask once every 3 days for trans-membrane hydration.</div>
+              </li>
+            </ul>
+            <div class="sol-prods">
+              <div class="lbl">Key Products in Regimen</div>
+              <span class="pill">Wrinkle Support (5 ml × 6)</span>
+              <span class="pill">Firming Lotion (5 ml × 2)</span>
+              <span class="pill">Blue Book Set</span>
+              <span class="pill">Sheet Mask</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sol-cta">
+          <a class="btn btn-gold" href="https://wa.me/8613648303693?text=Hi%20Allan,%20I%20am%20interested%20in%20the%20Cellular%20Wrinkle%20%26%20Firming%20Protocol">Inquire on WhatsApp</a>
+          <a class="btn btn-line" href="product-ampoule-fluid.html">View Wrinkle Support Specs</a>
+        </div>
+      </div>
+
+      <!-- Tab 3: Barrier Recovery & Soothing -->
+      <div class="sol-pane" id="sol-pane-2">
+        <div class="sol-banner">
+          <span class="ev-tag">28-Day Clinical Evidence</span>
+          <b>JC-01 Third-Party Efficacy Report: Acne / redness surface area ↓43.84% · Non-irritating &amp; mild.</b>
+          <p style="margin-top:6px;color:var(--grey);font-size:15px">
+            Specifically designed for compromised skin barriers, post-treatment sensitivity, active redness and acne-prone skin.
+            Physiological phospholipid carrier restores intercellular lipid matrix while calming micro-inflammation.
+          </p>
+        </div>
+
+        <div class="sol-grid">
+          <!-- Salon Column -->
+          <div class="sol-box">
+            <h3>
+              Professional Salon Protocol
+              <span class="badge">7–10 Days / Session</span>
+            </h3>
+            <div class="sub">Cryo-infusion barrier calming &amp; inflammation soothing treatment</div>
+            <ul class="sol-steps">
+              <li>
+                <span class="sol-step-num">01</span>
+                <div><b>Ultra-Gentle Cleanse:</b> Cleanse with tepid water; capture client baseline imaging.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">02</span>
+                <div><b>Cryo-Infusion Soothing:</b> First infuse <a href="product-cell-revitalizing-essence.html" style="color:var(--gold)">Revitalizing Essence (微能体焕能液)</a>, followed by <a href="product-ampoule-lotion.html" style="color:var(--gold)">Skin Soothing Lotion (微能体安肌液)</a> via cold probe / cryo-infusion for rapid redness reduction.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">03</span>
+                <div><b>Calming Sheet Mask:</b> Apply <a href="product-sheet-mask.html" style="color:var(--gold)">Sheet Mask</a> for 15–20 minutes to cool and replenish barrier lipids.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">04</span>
+                <div><b>Barrier Seal:</b> Apply Revitalizing Spray/Fluid &#8594; Revitalizing Lotion &#8594; light layer of Nourishing Cream.</div>
+              </li>
+            </ul>
+            <div class="sol-prods">
+              <div class="lbl">Key Products in Protocol</div>
+              <span class="pill">Revitalizing Essence (5 ml)</span>
+              <span class="pill">Skin Soothing Lotion (安肌液 5 ml)</span>
+              <span class="pill">Sheet Mask</span>
+              <span class="pill">Revitalizing Lotion &amp; Cream</span>
+            </div>
+          </div>
+
+          <!-- Homecare Column -->
+          <div class="sol-box">
+            <h3>
+              Homecare Daily Routine
+              <span class="badge">AM &amp; PM Daily</span>
+            </h3>
+            <div class="sub">1:1 Ultrasonic nano-mist infusion and barrier reinforcement</div>
+            <ul class="sol-steps">
+              <li>
+                <span class="sol-step-num">01</span>
+                <div><b>★ 1:1 Device Infusion:</b> Mix <b>6&nbsp;ml Base Revitalizing Fluid + 6&nbsp;ml Purified Water (1:1 ratio)</b> into a nano-mist ultrasonic sprayer. Spray evenly over cleansed face twice daily. *(Use purified/distilled water only; flush device with clean water after each use).*</div>
+              </li>
+              <li>
+                <span class="sol-step-num">02</span>
+                <div><b>Nourish &amp; Lock:</b> Follow with <a href="product-revitalizing-lotion.html" style="color:var(--gold)">Revitalizing Lotion (80 ml)</a> and a light touch of Revitalizing Cream.</div>
+              </li>
+              <li>
+                <span class="sol-step-num">03</span>
+                <div><b>Purification Masking:</b> Apply Sheet Mask daily during acute inflammation periods; transition to once every 3 days as skin stabilizes.</div>
+              </li>
+            </ul>
+            <div class="sol-prods">
+              <div class="lbl">Key Products in Regimen</div>
+              <span class="pill">Base Revitalizing Fluid (5 ml × 10)</span>
+              <span class="pill">Revitalizing Lotion (80 ml)</span>
+              <span class="pill">Revitalizing Cream</span>
+              <span class="pill">Sheet Mask</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sol-cta">
+          <a class="btn btn-gold" href="https://wa.me/8613648303693?text=Hi%20Allan,%20I%20am%20interested%20in%20the%20Barrier%20Recovery%20Protocol">Inquire on WhatsApp</a>
+          <a class="btn btn-line" href="product-skin-essence.html">View Base Fluid Specs</a>
+        </div>
       </div>
     </div>
   </section>
@@ -496,6 +801,29 @@ footer a:hover{color:var(--gold)}
     <div>A cell biotechnology company &#183; <span translate="no">WEINENGTI</span> skincare &#183; Chongqing, China</div>
   </div>
 </footer>
+
+<script>
+function switchSolTab(idx){
+  var tabs = document.querySelectorAll('.sol-tab-btn');
+  var panes = document.querySelectorAll('.sol-pane');
+  tabs.forEach(function(t, i){
+    if(i === idx){
+      t.classList.add('active');
+      t.setAttribute('aria-selected', 'true');
+    } else {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    }
+  });
+  panes.forEach(function(p, i){
+    if(i === idx){
+      p.classList.add('active');
+    } else {
+      p.classList.remove('active');
+    }
+  });
+}
+</script>
 
 </body>
 </html>
